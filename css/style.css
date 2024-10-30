@@ -1,10 +1,17 @@
 /*---------------------------------------/*
  # SETTINGS
 /*---------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* :root{
 
+} */
 /*---------------------------------------/*
  # ELEMENTS
-/*---------------------------------------*/
+ /*---------------------------------------*/
 
 /*---------------------------------------/*
  # OBJECTS
@@ -13,7 +20,119 @@
 /*---------------------------------------/*
  # COMPONENTS
 /*---------------------------------------*/
+.c-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px;
+}
+.c-header {
+  height: 100vh;
+  grid-column: 1;
+  background-color: #333;
+  color: #fff;
 
+}
+.c-nav {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+}
+.c-nav__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.c-nav__item {
+  list-style: none;
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0 2rem;
+  border-left: #faebd700 4px solid;
+  border-start-start-radius: 4px;
+  border-start-end-radius: 4px;
+}
+.c-nav__icon {
+  fill: currentColor;
+}
+.c-nav__link:hover,
+.c-nav__icon {
+  fill: #f00;
+}
+.c-nav__link--active {
+ 
+border-color: #ff0d0d;
+}
+.c-main__content {
+  grid-column: 2 /10;
+
+}
+.c-aside {
+  padding: 1.5rem  ;
+  grid-column: 10 /13;
+  background-color: #333;
+  display: flex; justify-content: space-between;
+  flex-direction: column;
+}
+.c-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c-info__plan{
+  color: blueviolet;
+}
+.c-profile
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.c-profile__pic{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+.c-profile__inhoud{
+height: 100%;
+}
+.c-profile__planupgrade{
+  background: purple;
+  color: #fff;
+  padding: 1rem 2.625rem;
+  border-radius: 50px;
+  text-decoration: none;
+}
+.c-money{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+.c-money__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.c-money__line{
+  height:  100%;
+  width:  1px;
+  background-color: #fff;
+}
 /*---------------------------------------/*
  # UTILITIES
 /*---------------------------------------*/
