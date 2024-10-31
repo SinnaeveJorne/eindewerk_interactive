@@ -1,14 +1,18 @@
 /*---------------------------------------/*
  # SETTINGS
 /*---------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
 }
-/* :root{
+ :root{
 
-} */
+
+} 
+ 
 /*---------------------------------------/*
  # ELEMENTS
  /*---------------------------------------*/
@@ -29,7 +33,7 @@
 .c-header {
   height: 100vh;
   grid-column: 1;
-  background-color: #333;
+  background-color: #E5E3EB;
   color: #fff;
 
 }
@@ -40,7 +44,7 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
-  background-color: #333;
+  background-color: #E5E3EB;
   color: #fff;
 }
 .c-nav__main {
@@ -70,15 +74,25 @@
 border-color: #ff0d0d;
 }
 .c-main__content {
+  padding: 1.5rem 0;
   grid-column: 2 /10;
-
+  grid-template-columns:subgrid;
+  grid-template-rows:4 ;
+  gap: 32px;
+  display: grid;
+  & > *:not(:first-child) {
+    background-color: #E5E3EB;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
 }
 .c-aside {
   padding: 1.5rem  ;
   grid-column: 10 /13;
-  background-color: #333;
+  background-color: #E5E3EB;
   display: flex; justify-content: space-between;
   flex-direction: column;
+  height: 100vh;
 }
 .c-info{
   display: flex;
@@ -94,6 +108,7 @@ border-color: #ff0d0d;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  
 }
 
 .c-profile__pic{
@@ -132,6 +147,111 @@ height: 100%;
   height:  100%;
   width:  1px;
   background-color: #fff;
+}
+.c-message{
+
+}
+.c-message__block{
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.c-message__img{
+  width: 50px;
+  height: 50px;
+  size: cover;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+
+
+}
+.c-message__content{display: flex; gap: 1rem;}
+.c-message__imgin{
+  height: 100%;
+}
+.c-message__inhoud{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.c-title{
+grid-row: 1;
+height: 100%;
+}
+.c-title h1{
+  font-size: 4rem;
+  color: #333333;
+}
+.c-customer{
+  grid-column: 1/3;
+  grid-row: 2;
+}
+.c-websidev{
+  grid-column: 3/5; 
+  grid-row: 2;
+
+}
+.c-orders{
+  grid-column: 1/3; 
+  grid-row: 3;
+
+}
+.c-growht{
+  grid-column: 3/5; 
+  grid-row: 3;
+}
+.c-devices{
+  grid-column: 5/9 ;
+  height: 100%;
+  grid-row: 2/4;
+}
+.c-goals{
+  grid-column: 1/5 ;
+  grid-row: 4;
+}
+.c-revenui{
+  grid-column:1/5 ;
+  grid-row: 5;
+}
+.c-map{
+  grid-column: 5/9 ;
+  grid-row: 4/6;
+}
+.c-devices__piechart{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: conic-gradient(
+      pink 70deg,
+      lightblue 0 235deg,
+      orange 0
+  );
+}
+.c-message__inhoud{
+  font-size: 1rem;
+
+}
+.c-message__name{
+color: plum;
+}
+.c-message__txt{
+font-size: 14px;
+color: #33333380;
+}
+.c-message__time{
+font-size: 14px;
+color: #33333380;
+
+}
+.c-msmmain{
+  display: flex;
+  justify-content: space-between;
 }
 /*---------------------------------------/*
  # UTILITIES
